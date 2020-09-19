@@ -1,0 +1,16 @@
+﻿@model IEnumerable < Vidly.Models.Customer >
+ { 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ul>
+
+    @foreach (var customer in Model)
+    {
+
+        <tr>
+            @Html.ActionLink(customer.name,"Details","Customer",new { id=customer.ID},null)
+        </tr>
+
+    }
+
+</ul>
