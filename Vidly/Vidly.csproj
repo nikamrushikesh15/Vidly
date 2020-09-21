@@ -196,14 +196,48 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009200900168_InitialMigration.cs" />
+    <Compile Include="Migrations\202009200900168_InitialMigration.Designer.cs">
+      <DependentUpon>202009200900168_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009200922018_addissubscribedtoNewsletter.cs" />
+    <Compile Include="Migrations\202009200922018_addissubscribedtoNewsletter.Designer.cs">
+      <DependentUpon>202009200922018_addissubscribedtoNewsletter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009200928317_addmembershiptype.cs" />
+    <Compile Include="Migrations\202009200928317_addmembershiptype.Designer.cs">
+      <DependentUpon>202009200928317_addmembershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201142585_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202009201142585_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>202009201142585_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201156033_ApplyAnnotationtodB.cs" />
+    <Compile Include="Migrations\202009201156033_ApplyAnnotationtodB.Designer.cs">
+      <DependentUpon>202009201156033_ApplyAnnotationtodB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201330223_AddedMembershiptypevalue.cs" />
+    <Compile Include="Migrations\202009201330223_AddedMembershiptypevalue.Designer.cs">
+      <DependentUpon>202009201330223_AddedMembershiptypevalue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201335475_insertingMembershiptypevalue.cs" />
+    <Compile Include="Migrations\202009201335475_insertingMembershiptypevalue.Designer.cs">
+      <DependentUpon>202009201335475_insertingMembershiptypevalue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -266,6 +300,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Navbar.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Detail.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +321,29 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009200900168_InitialMigration.resx">
+      <DependentUpon>202009200900168_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009200922018_addissubscribedtoNewsletter.resx">
+      <DependentUpon>202009200922018_addissubscribedtoNewsletter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009200928317_addmembershiptype.resx">
+      <DependentUpon>202009200928317_addmembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201142585_PopulateMembershipTypes.resx">
+      <DependentUpon>202009201142585_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201156033_ApplyAnnotationtodB.resx">
+      <DependentUpon>202009201156033_ApplyAnnotationtodB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201330223_AddedMembershiptypevalue.resx">
+      <DependentUpon>202009201330223_AddedMembershiptypevalue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201335475_insertingMembershiptypevalue.resx">
+      <DependentUpon>202009201335475_insertingMembershiptypevalue.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
