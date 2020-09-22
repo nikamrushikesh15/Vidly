@@ -10,10 +10,11 @@
     @foreach (var movie in Model)
     {
 
-        <tr>
-            <td>@Html.ActionLink(movie.name, "Detail", "Movie", new { id = movie.Id }, null)</td>
+       <li>
+            @Html.ActionLink(movie.name, "Detail", "Movie", new { id = movie.Id }, null)
 
-        </tr>
+
+        </li>
 
     }
 

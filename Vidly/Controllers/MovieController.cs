@@ -10,16 +10,26 @@ namespace Vidly.Controllers
     public class MovieController : Controller
     {
         // GET: Movie
+        private ApplicationDbContext _context;
+        public MovieController()
+        {
+
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();    //Dispose(disposing);
+        }
         public ActionResult Index()
         {
-            var Movies = GetMovies();
+            var Movies = _context.Movie.ToList();
 
             return View(Movies);
         }
 
         public ActionResult Detail(int id)
         {
-            var movie = GetMovies().SingleOrDefault(c => c.Id == id);
+            var movie = _context.Movie.ToList().SingleOrDefault(c => c.Id == id);
 
             if (movie == null)
                 return HttpNotFound();

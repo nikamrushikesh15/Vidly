@@ -231,6 +231,18 @@
     <Compile Include="Migrations\202009201335475_insertingMembershiptypevalue.Designer.cs">
       <DependentUpon>202009201335475_insertingMembershiptypevalue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009210421228_Birthdatepropadded.cs" />
+    <Compile Include="Migrations\202009210421228_Birthdatepropadded.Designer.cs">
+      <DependentUpon>202009210421228_Birthdatepropadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009220434218_AddedMovieProperties.cs" />
+    <Compile Include="Migrations\202009220434218_AddedMovieProperties.Designer.cs">
+      <DependentUpon>202009220434218_AddedMovieProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009220438010_InsertingValuetoMovie.cs" />
+    <Compile Include="Migrations\202009220438010_InsertingValuetoMovie.Designer.cs">
+      <DependentUpon>202009220438010_InsertingValuetoMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -343,6 +355,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009201335475_insertingMembershiptypevalue.resx">
       <DependentUpon>202009201335475_insertingMembershiptypevalue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009210421228_Birthdatepropadded.resx">
+      <DependentUpon>202009210421228_Birthdatepropadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009220434218_AddedMovieProperties.resx">
+      <DependentUpon>202009220434218_AddedMovieProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009220438010_InsertingValuetoMovie.resx">
+      <DependentUpon>202009220438010_InsertingValuetoMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
