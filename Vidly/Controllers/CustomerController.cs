@@ -30,6 +30,15 @@ namespace Vidly.Controllers
 
             return View(customers);
         }
+        public ActionResult New() {
+
+            var membershiptype = _context.membershipTypes.ToList();
+            var viewmodel = new newcustomerviewmodel {
+
+                membershipTypes = membershiptype
+        };
+            return View(viewmodel);
+        }
 
         public ActionResult Detail(int id)
         {
