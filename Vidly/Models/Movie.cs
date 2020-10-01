@@ -9,9 +9,11 @@ namespace Vidly.Models
     {
 
         public int Id { get; set; }
-        public string name { get; set; }
-        public string Genre { get; set; }
+        public string name { get; set; }        
+       
         public DateTime Date_Added { get; set; }
         public int stock { get; set; }
+        public Genr genr { get; set; }
+        public int GenrId { get; set; }
     }
 }

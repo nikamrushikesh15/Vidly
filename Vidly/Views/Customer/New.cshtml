@@ -19,7 +19,7 @@
     <div class="form-group">
 
         @Html.LabelFor(m => m.customer.birthdate)
-        @Html.TextBoxFor(m => m.customer.birthdate, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.customer.birthdate,"{0:d MMM yyyy}", new { @class = "form-control" })
 
     </div>
 
@@ -36,6 +36,7 @@
         @Html.DropDownListFor(m => m.customer.MembershipTypeId,new SelectList(Model.membershipTypes,"Id","name"),"select membership type", new { @class = "form-control" })
 
     </div>
+    @Html.HiddenFor(m=>m.customer.ID)
     <button type="submit" class="btn btn-primary">submit</button>
 
 

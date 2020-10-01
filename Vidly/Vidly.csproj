@@ -243,9 +243,14 @@
     <Compile Include="Migrations\202009220438010_InsertingValuetoMovie.Designer.cs">
       <DependentUpon>202009220438010_InsertingValuetoMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010010512419_addedbmigration.cs" />
+    <Compile Include="Migrations\202010010512419_addedbmigration.Designer.cs">
+      <DependentUpon>202010010512419_addedbmigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genr.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -366,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009220438010_InsertingValuetoMovie.resx">
       <DependentUpon>202009220438010_InsertingValuetoMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010010512419_addedbmigration.resx">
+      <DependentUpon>202010010512419_addedbmigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

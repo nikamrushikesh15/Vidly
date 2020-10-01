@@ -43,14 +43,43 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult create(Customer customer)
         {
+            if (customer.ID == 0)
+            {
+                _context.Customer.Add(customer);
 
-            _context.Customer.Add(customer);
+
+            }
+            else
+            {
+                var customerInDb = _context.Customer.Single(c => c.ID == customer.ID);
+                customerInDb.name = customer.name;
+                customerInDb.birthdate = customer.birthdate;
+                customerInDb.IssusbscribedtoNewsletter = customer.IssusbscribedtoNewsletter;
+                customerInDb.MembershipTypeId = customer
+                    .MembershipTypeId;
+
+
+            }
             _context.SaveChanges();
             return RedirectToAction("Index", "Customer");
           //  return View();
 
         }
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customer.SingleOrDefault(c => c.ID == id);
+            if (customer == null)
+                return HttpNotFound();
+            var viewmodel = new newcustomerviewmodel()
+            {
+                customer = customer,
+                membershipTypes = _context.membershipTypes.ToList()
 
+
+
+        };
+            return View("New",viewmodel);
+        }
         public ActionResult Detail(int id)
         {
             var memenership = _context.membershipTypes;
