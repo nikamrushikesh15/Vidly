@@ -1,0 +1,44 @@
+﻿@model Vidly.Models.NewMovieClass
+@{
+                /**/
+
+                ViewBag.Title = "New";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("create", "Movie"))
+{
+
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.Movie.name)
+        @Html.TextBoxFor(m => m.Movie.name, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.Movie.Date_Added)
+        @Html.TextBoxFor(m => m.Movie.Date_Added, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.Movie.stock)
+        @Html.TextBoxFor(m => m.Movie.stock, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.Movie.GenrId)
+        @Html.DropDownListFor(m => m.Movie.GenrId, new SelectList(Model.genrs, "Id", "name"), "select genr type", new { @class = "form-control" })
+
+    </div>
+    @Html.HiddenFor(m => m.Movie.Id)
+    <button type="submit" class="btn btn-primary">submit</button>
+
+
+}
+
+
