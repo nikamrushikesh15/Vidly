@@ -8,6 +8,7 @@ namespace Vidly.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymousAttribute]
         public ActionResult Index()
         {
             return View();
